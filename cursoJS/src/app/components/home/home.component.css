@@ -1,8 +1,19 @@
 div.line {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 div.card {
-    margin-top: 60px;
+    margin-bottom: 60px;
+}
+div.card-body {
+    position: relative;
+}
+div.card-body p.card-text {
+    margin-bottom: 40px;
+}
+div.card-body a.btn-primary {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }

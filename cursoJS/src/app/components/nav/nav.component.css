@@ -1,9 +1,10 @@
 .activateLink {
     font-weight: bolder;
     transition: .3s;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(170, 170, 170);
 }
 a.navbar-brand {
     padding: 20px;
     transition: .3s;
+    margin-right: 0;
 }

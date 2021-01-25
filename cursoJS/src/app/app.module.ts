@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyPersonComponent } from './components/my-person/my-person.component';
-import { JSComponent } from './components/js/js.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MaxLenghtPipe } from './pipes/max-lenght.pipe';
+import { CursoJSComponent } from './components/curso-js/curso-js.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MyPersonComponent,
-    JSComponent,
     NavComponent,
     MaxLenghtPipe,
+    CursoJSComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
