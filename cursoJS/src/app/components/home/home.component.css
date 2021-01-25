@@ -1,0 +1,8 @@
+div.line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+div.card {
+    margin-top: 60px;
+}
