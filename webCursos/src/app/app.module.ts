@@ -13,6 +13,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
 import { PorfolioComponent } from './components/porfolio/porfolio.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { PorfolioComponent } from './components/porfolio/porfolio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

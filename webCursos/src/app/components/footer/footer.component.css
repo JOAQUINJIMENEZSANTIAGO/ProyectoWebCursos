@@ -1,6 +1,6 @@
 div {
     background-color: black;
-    padding: 40px 20px;
+    padding: 20px 0;
 }
 div p {
     text-align: center;
@@ -12,5 +12,18 @@ div nav {
     justify-content: center;
 }
 div nav a {
-    padding: 0 30px;
+    margin: 0 30px;
+    color: var(--text-color-footer);
+    font-size: 20px;
+}
+div div:last-child nav a {
+    padding: 10px 0;
+}
+div nav a i {
+    color: var(--text-color-footer);
+    font-size: 40px;
+    transition:all .3s ease;
+}
+div nav a i:hover {
+    transform: scale(1.2);
 }
