@@ -1,0 +1,12 @@
+div.image {
+    background-image: url("../../../assets/images/photo.jpeg");
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    margin: auto auto 60px;
+}
+p {
+    width: 70% ;
+    margin: auto;
+    color:var(--text-color-second) ;
+}

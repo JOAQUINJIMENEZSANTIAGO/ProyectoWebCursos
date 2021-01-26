@@ -1,0 +1,16 @@
+div {
+    background-color: black;
+    padding: 40px 20px;
+}
+div p {
+    text-align: center;
+    color: white;
+}
+div nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div nav a {
+    padding: 0 30px;
+}

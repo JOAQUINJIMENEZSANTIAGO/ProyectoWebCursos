@@ -1,10 +1,31 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    padding: 10px;
+    color: var( --text-color-second);
+    font-weight: bold;
+    outline-style: none; 
+    transition: 0.1s;
+}
+nav a:hover {
+    border-bottom: 2px solid black;
+    outline-style: none;
+    text-decoration: none;
+}
 .activateLink {
     font-weight: bolder;
     transition: .3s;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+    color: rgb(255, 255, 255) !important;
 }
-a.navbar-brand {
+
+/* a.navbar-brand {
     padding: 20px;
     transition: .3s;
     margin-right: 0;
-}
+    text-align: center;
+} */
