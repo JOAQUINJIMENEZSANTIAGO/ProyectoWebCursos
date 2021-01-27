@@ -1,11 +1,12 @@
-<input type="text">
+<input type="text" [(ngModel)]="filter" (ngModelChange)="onChange($event)"> 
 <div class="line">
     <div *ngFor="let curso of cursos" class="card" style="width: 18rem;">
       <img src={{curso.img}} class="card-img-top" >
       <div class="card-body">
         <h5 class="card-title">{{curso.title}}</h5>
         <p class="card-text">{{curso.description}}</p>
-        <a routerLink={{curso.rooting}} class="btn btn-primary">Ver mas</a>
+        <a *ngIf="curso.finished == false" >Proximamente ...</a>
+        <a *ngIf="curso.finished == true " routerLink={{curso.rooting}} >Ver más</a>
       </div>
     </div>
     

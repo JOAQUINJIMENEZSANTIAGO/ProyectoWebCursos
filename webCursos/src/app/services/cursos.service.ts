@@ -8,20 +8,30 @@ import {Curso} from '../interfaces/curso';
   providedIn: 'root'
 })
 export class CursosService {
-  
-  constructor( ) { 
 
+  constructor( ) { 
   }
+  
   // creo un a funcion que retorna una promesa tipo curso de la db y me cencioro de que el array no esta vacio
   getAllCursos(): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
       if (CURSOS.length > 0) {
         resolve(CURSOS);
       } else {
-        reject("Error, dataBase empty ")
+        reject("No hay ningun curso");
       }
-      
     });
   }
+  getCursosIncludesLetter(parameter): Promise<Curso[]> {
+    return new Promise<Curso[]>((resolve, reject)=> {
+      if (CURSOS.length > 0) {
+        let result = CURSOS.filter(cursos => cursos.title.includes(parameter));
+        resolve (result)
+      } else {
+        reject("No se a encontrado ningun curso")
+      }
+    });
+  }
+ 
 
 }

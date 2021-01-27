@@ -5,20 +5,23 @@ export const CURSOS: Curso[] = [
         title: "JavaScript",
         description: "Iniciación y primeros fundamentos a JavaScript",
         rooting:"cursoJS",
-        img:"../../../assets/images/js.png"
+        img:"../../../assets/images/js.png",
+        finished: true
     },
     {
         id:2,
         title: "AngularJS",
         description: "Unos de los framework mas utilizados mundialmente",
         rooting:"cursoAngularJS",
-        img:"../../../assets/images/angular.png"
+        img:"../../../assets/images/angular.png",
+        finished: false
     },
     {
         id:3,
         title: "Git",
-        description: ">Varios comandos que debes saber con Git",
+        description: "Varios comandos que debes saber con Git",
         rooting:"cursoGit",
-        img:"../../../assets/images/gitt.png"
+        img:"../../../assets/images/gitt.png",
+        finished: false
     }
 ]

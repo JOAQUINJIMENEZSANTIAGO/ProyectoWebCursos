@@ -4,4 +4,5 @@ export interface Curso {
     description: string;
     rooting: string;
     img: string;
+    finished: boolean;
 }
