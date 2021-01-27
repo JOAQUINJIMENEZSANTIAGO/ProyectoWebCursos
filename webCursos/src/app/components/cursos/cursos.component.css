@@ -1,3 +1,31 @@
+
+input {
+    display: block;
+    margin:  auto auto 50px;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border: none;
+}
+p.button {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-color-second);
+    font-weight: 900;
+    font-size: 20px;
+    transition:all .2s ease-in-out;
+}
+p.button:hover {
+   color: black;
+   cursor: pointer;
+}
+p.button:active {
+    color: var(--text-color-second);
+}
+
+p.noFind {
+    text-align: center;
+}
+
 div.line {
     display: flex;
     flex-wrap: wrap;

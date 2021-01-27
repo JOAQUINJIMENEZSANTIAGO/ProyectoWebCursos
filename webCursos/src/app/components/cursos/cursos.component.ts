@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/interfaces/curso';
 import { CursosService } from 'src/app/services/cursos.service';
 
@@ -10,9 +10,18 @@ import { CursosService } from 'src/app/services/cursos.service';
 export class CursosComponent implements OnInit {
 
   cursos: Curso[];
-  filter: any;
+  resultInput: string;
+  alertNoFind: string;
+  alertEmpety: String;
+  cursosLenght: Number;
+  textAlert: string;
+  
 
   constructor(private CursosService:CursosService) { 
+    this.resultInput = "";
+    this.alertEmpety = "";
+    this.alertNoFind = "";
+    this.textAlert = "No hay cursos disponibles"
 
   }
 
@@ -22,16 +31,31 @@ export class CursosComponent implements OnInit {
       this.cursos = await this.CursosService.getAllCursos();
     } catch (error) {
       console.log(error);
+      this.alertEmpety = this.textAlert;
     }
   }
-  onChange(event) {
-    console.log(event);
+
+
+  async onChange(event) {
     try {
-      this.CursosService.getCursosIncludesLetter(event)
+      this.cursos = await this.CursosService.getCursosIncludesLetter(event);
+      if (this.cursos.length == 0) {
+        this.alertNoFind = "Busqueda sin resultado, el titulo del curso no contiene los caracteres introducidos";
+      }else { this.alertNoFind = ""}
+      
+      console.log(this.cursos.length);
     } catch (error) {
-      console.log(error);  
+      console.log(error); 
     }
- 
+  }
+  async onClick() {
+    try {
+      this.cursos = await this.CursosService.getAllCursos();
+      this.resultInput = "";
+    } catch (error) {
+      console.log(error);
+
+    }
   }
   
   

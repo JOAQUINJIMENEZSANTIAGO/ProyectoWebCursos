@@ -1,4 +1,3 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Injectable } from '@angular/core';
 import {CURSOS} from '../db/cursos.db';
 import {Curso} from '../interfaces/curso';
@@ -18,7 +17,7 @@ export class CursosService {
       if (CURSOS.length > 0) {
         resolve(CURSOS);
       } else {
-        reject("No hay ningun curso");
+        reject("Data base empety");
       }
     });
   }
@@ -28,10 +27,9 @@ export class CursosService {
         let result = CURSOS.filter(cursos => cursos.title.includes(parameter));
         resolve (result)
       } else {
-        reject("No se a encontrado ningun curso")
+        reject("No hay ningun curso")
       }
     });
   }
- 
 
 }
