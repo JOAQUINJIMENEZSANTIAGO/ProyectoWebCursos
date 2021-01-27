@@ -9,16 +9,16 @@ export const CURSOS: Curso[] = [
     },
     {
         id:2,
-        title: "JavaScript",
+        title: "AngularJS",
         description: "Unos de los framework mas utilizados mundialmente",
-        rooting:"",
+        rooting:"cursoAngularJS",
         img:"../../../assets/images/angular.png"
     },
     {
         id:3,
         title: "Git",
         description: ">Varios comandos que debes saber con Git",
-        rooting:"",
+        rooting:"cursoGit",
         img:"../../../assets/images/gitt.png"
     }
 ]

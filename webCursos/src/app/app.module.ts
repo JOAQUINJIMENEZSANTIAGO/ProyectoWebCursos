@@ -11,7 +11,7 @@ import { CursoJSComponent } from './components/curso-js/curso-js.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { PorfolioComponent } from './components/porfolio/porfolio.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,11 +24,12 @@ import { PorfolioComponent } from './components/porfolio/porfolio.component';
     CursoJSComponent,
     FooterComponent,
     CursosComponent,
-    PorfolioComponent,
+    PorfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

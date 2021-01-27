@@ -7,6 +7,6 @@ div.image {
 }
 p {
     width: 70% ;
-    margin: auto;
+    margin: auto auto 15px;
     color:var(--text-color-second) ;
 }
