@@ -7,13 +7,13 @@ div.inputCurso {
     z-index: 6;
 }
 
-input {
+div.inputCurso input {
     display: block;
     margin: auto auto 50px;
     text-align: center;
     background-color: rgb(238, 238, 238);
     border: none;
-    
+    animation: changeInput .5s ease-in-out;
 }
 
 p.button {
@@ -30,9 +30,8 @@ p.button {
     position: sticky;
     top: 130px;
     z-index: 6;
-     /* background: rgb(255, 255, 255); */
-     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
-
+    /* background: rgb(255, 255, 255); */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
 }
 
 p.button:hover {
@@ -54,23 +53,20 @@ div.line {
     justify-content: space-evenly;
 }
 
-div.card {
+div.line div.card {
     animation: containerCursos .3s ease-in-out;
-}
-
-div.card {
     margin-bottom: 60px;
 }
 
-div.card-body {
+div.line div.card-body {
     position: relative;
 }
 
-div.card-body p.card-text {
+div.line div.card-body p.card-text {
     margin-bottom: 40px;
 }
 
-div.card-body a.btn-primary {
+div.line div.card-body a.btn-primary {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -85,5 +81,17 @@ div.card-body a.btn-primary {
 @keyframes containerCursos {
     0% {
         transform: scale(.01);
+    }
+}
+
+@keyframes changeInput {
+    0% {
+        transform: translateX(-300px);
+        background-color: white;
+        color: white;
+    }
+    30% {
+        background-color: white;
+        color: white;
     }
 }
