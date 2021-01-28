@@ -52,6 +52,7 @@ export class CursosComponent implements OnInit {
     try {
       this.cursos = await this.CursosService.getAllCursos();
       this.resultInput = "";
+      this.alertNoFind = "";
     } catch (error) {
       console.log(error);
 

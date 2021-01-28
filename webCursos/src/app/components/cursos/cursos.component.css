@@ -5,14 +5,17 @@ input {
     text-align: center;
     background-color: rgb(238, 238, 238);
     border: none;
+    position: static;
 }
 p.button {
-    text-align: center;
+    margin: auto;
     margin-bottom: 50px;
     color: var(--text-color-second);
     font-weight: 900;
     font-size: 20px;
     transition:all .2s ease-in-out;
+    width: max-content;
+    animation: linkVolver .3s ease;
 }
 p.button:hover {
    color: black;
@@ -32,6 +35,9 @@ div.line {
     justify-content: space-evenly;
 }
 div.card {
+    animation: containerCursos .3s ease-in-out;
+}
+div.card {
     margin-bottom: 60px;
 }
 div.card-body {
@@ -44,4 +50,15 @@ div.card-body a.btn-primary {
     position: absolute;
     bottom: 10px;
     left: 10px;
+}
+
+@keyframes linkVolver{
+    0% {
+     color: white;
+    }
+}
+@keyframes containerCursos {
+    0% {
+        transform: scale(.01);
+    }
 }

@@ -1,45 +1,55 @@
-
-<div>
-    <h1 class="title1Cursos">JavaScript</h1>
-    <h2>Como se carga JavaScript</h2>
-    <ul>
-        <li>Dentro y al final del head con una etiqueta script y crear todo el codigo js dentro (no recomendable porque ensucia el código html).
-        </li>
-        <li>Dentro y al final del head con una etiqueta script añadir el atributo src y cargar la ruta del archivo JS creado anteriormente 'src="archivoJs" (no recomendable porque el script hace referencia al Dom y el Html carga despues) '</li>
-        <li>Como las dos opciones anteriores pero  <strong>al final del body</strong> , ya que el html necesita cargar antes el script. Siendo lamejor forma  crear un archivo JS y cargarlo a traves de etiqueta <strong> script src="archivo.js".</strong></li>  
-    </ul>
-    <h2>Tipos de datos</h2>
-    <ul>
-        <li><strong>undefined.</strong> Dato no encontrado</li>
-        <li><strong>null.</strong> No existe</li>
-        <li><strong>string</strong> o cadena de caracteres. (Entre comillas) </li> <p>var name = "Luis Alfonso"</p>
-        <li><strong>number.</strong>
-            <p>var number = 3</p>
-            <ul>
-                <li>Entero 45</li>
-                <li>Racional  4.66</li>
-                <li>Negativo -8</li>
-            </ul>
-        </li>
-        <li><strong>Boolean.</strong> true / false</li>
-    </ul>
-    <h2>Variables y constantes</h2>
-    <p>Son un tipo de contenedor donde podemos guardar datos y en algunos casos modificarlos</p>
-    <ul>
-        <li><strong>var.</strong> Como su nombre indica es un contenedor de datos variables. Al no ser un lenguaje fuertemente tipado el tipo de dato puede variar. 
-            <ul>
-                <li>var number = 5;</li>
-                <li>console.log(number) // 5</li>
-                <li>number = "Cambio a texto"</li>
-                <li>console.log(number) // "Cambio a texto" </li>
-            </ul>
-        </li>
-        <li><strong>const.</strong> Dato constante, no se puede modificar.
-            <ul>
-                <li>const number = 5;</li>
-                <li>console.log(number) // 5</li>
-                <li>number = "Cambio a texto"</li>
-                <li>Error se puede asignar otro valor a una constate </li>
-            </ul></li>
-    </ul>
+<div class=" relative">
+    <p class="returnCursos" routerLink="/cursos" >Volver a todos los cursos <i class="fas fa-undo"></i></p>
+    <div class="textCurso">
+        <h1 class="title1Cursos">JavaScript</h1>
+        <h2>Como se carga JavaScript</h2>
+        <ul>
+            <li>Dentro y al final del head con una etiqueta script y crear todo el codigo js dentro (no recomendable
+                porque ensucia el código html).
+            </li>
+            <li>Dentro y al final del head con una etiqueta script añadir el atributo src y cargar la ruta del archivo
+                JS creado anteriormente 'src="archivoJs" (no recomendable porque el script hace referencia al Dom y el
+                Html carga despues) '</li>
+            <li>Como las dos opciones anteriores pero <strong>al final del body</strong> , ya que el html necesita
+                cargar antes el script. Siendo lamejor forma crear un archivo JS y cargarlo a traves de etiqueta
+                <strong> script src="archivo.js".</strong></li>
+        </ul>
+        <h2>Tipos de datos</h2>
+        <ul>
+            <li><strong>undefined.</strong> Dato no encontrado</li>
+            <li><strong>null.</strong> No existe</li>
+            <li><strong>string</strong> o cadena de caracteres. (Entre comillas) </li>
+            <p>var name = "Luis Alfonso"</p>
+            <li><strong>number.</strong>
+                <p>var number = 3</p>
+                <ul>
+                    <li>Entero 45</li>
+                    <li>Racional 4.66</li>
+                    <li>Negativo -8</li>
+                </ul>
+            </li>
+            <li><strong>Boolean.</strong> true / false</li>
+        </ul>
+        <h2>Variables y constantes</h2>
+        <p>Son un tipo de contenedor donde podemos guardar datos y en algunos casos modificarlos</p>
+        <ul>
+            <li><strong>var.</strong> Como su nombre indica es un contenedor de datos variables. Al no ser un lenguaje
+                fuertemente tipado el tipo de dato puede variar.
+                <ul>
+                    <li>var number = 5;</li>
+                    <li>console.log(number) // 5</li>
+                    <li>number = "Cambio a texto"</li>
+                    <li>console.log(number) // "Cambio a texto" </li>
+                </ul>
+            </li>
+            <li><strong>const.</strong> Dato constante, no se puede modificar.
+                <ul>
+                    <li>const number = 5;</li>
+                    <li>console.log(number) // 5</li>
+                    <li>number = "Cambio a texto"</li>
+                    <li>Error se puede asignar otro valor a una constate </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
