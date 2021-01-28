@@ -24,8 +24,8 @@ export class CursosService {
   getCursosIncludesLetter(parameter): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
       if (CURSOS.length > 0) {
-        let result = CURSOS.filter(cursos => cursos.title.includes(parameter));
-        resolve (result)
+        let result = CURSOS.filter(cursos => cursos.title.toLowerCase().includes(parameter.toLowerCase()));
+        resolve (result);
       } else {
         reject("No hay ningun curso")
       }

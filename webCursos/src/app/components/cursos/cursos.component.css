@@ -1,26 +1,45 @@
+div.inputCurso {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
+    padding: 40px 0 5px;
+    position: sticky;
+    top: 50px;
+    z-index: 6;
+}
 
 input {
     display: block;
-    margin:  auto auto 50px;
+    margin: auto auto 50px;
     text-align: center;
     background-color: rgb(238, 238, 238);
     border: none;
-    position: static;
+    
 }
+
 p.button {
     margin: auto;
     margin-bottom: 50px;
+    text-align: center;
     color: var(--text-color-second);
     font-weight: 900;
     font-size: 20px;
-    transition:all .2s ease-in-out;
-    width: max-content;
+    padding: 20px 0 40px;
+    transition: all .2s ease-in-out;
+    /* width: max-content; */
     animation: linkVolver .3s ease;
+    position: sticky;
+    top: 130px;
+    z-index: 6;
+     /* background: rgb(255, 255, 255); */
+     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
+
 }
+
 p.button:hover {
-   color: black;
-   cursor: pointer;
+    color: black;
+    cursor: pointer;
 }
+
 p.button:active {
     color: var(--text-color-second);
 }
@@ -34,29 +53,35 @@ div.line {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 div.card {
     animation: containerCursos .3s ease-in-out;
 }
+
 div.card {
     margin-bottom: 60px;
 }
+
 div.card-body {
     position: relative;
 }
+
 div.card-body p.card-text {
     margin-bottom: 40px;
 }
+
 div.card-body a.btn-primary {
     position: absolute;
     bottom: 10px;
     left: 10px;
 }
 
-@keyframes linkVolver{
+@keyframes linkVolver {
     0% {
-     color: white;
+        color: white;
     }
 }
+
 @keyframes containerCursos {
     0% {
         transform: scale(.01);

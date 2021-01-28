@@ -1,4 +1,7 @@
-<input type="text" placeholder="Busca un curso" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
+<div class="inputCurso">
+  <input type="text" placeholder="Busca un curso" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
+</div>
+
 <p *ngIf="resultInput" (click)="onClick()" class="button">Volver a todos los cursos <i class="fas fa-undo"></i>
 <p>
 <p class="noFind" *ngIf="alertNoFind ">{{alertNoFind}}</p>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/interfaces/curso';
 import { CursosService } from 'src/app/services/cursos.service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -17,7 +18,7 @@ export class CursosComponent implements OnInit {
   textAlert: string;
   
 
-  constructor(private CursosService:CursosService) { 
+  constructor(private CursosService:CursosService,private router: Router) { 
     this.resultInput = "";
     this.alertEmpety = "";
     this.alertNoFind = "";
@@ -26,6 +27,12 @@ export class CursosComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
     // nada mas iniciar el componnete consumo la peticio de todos los cursos 
     try {
       this.cursos = await this.CursosService.getAllCursos();
