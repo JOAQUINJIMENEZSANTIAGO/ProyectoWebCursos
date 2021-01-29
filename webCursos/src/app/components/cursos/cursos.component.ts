@@ -16,9 +16,9 @@ export class CursosComponent implements OnInit {
   alertEmpety: String;
   cursosLenght: Number;
   textAlert: string;
-  
 
-  constructor(private CursosService:CursosService,private router: Router) { 
+
+  constructor(private CursosService: CursosService, private router: Router) {
     this.resultInput = "";
     this.alertEmpety = "";
     this.alertNoFind = "";
@@ -29,10 +29,10 @@ export class CursosComponent implements OnInit {
   async ngOnInit() {
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
-          return;
+        return;
       }
       window.scrollTo(0, 0)
-  });
+    });
     // nada mas iniciar el componnete consumo la peticio de todos los cursos 
     try {
       this.cursos = await this.CursosService.getAllCursos();
@@ -49,9 +49,9 @@ export class CursosComponent implements OnInit {
       this.cursos = await this.CursosService.getCursosIncludesLetter(eventTrim);
       if (this.cursos.length == 0) {
         this.alertNoFind = "Busqueda sin resultado, el titulo del curso no contiene los caracteres introducidos";
-      }else { this.alertNoFind = ""}
+      } else { this.alertNoFind = "" }
     } catch (error) {
-      console.log(error); 
+      console.log(error);
     }
   }
   async onClick() {
@@ -64,7 +64,7 @@ export class CursosComponent implements OnInit {
 
     }
   }
-  
-  
+
+
 
 }

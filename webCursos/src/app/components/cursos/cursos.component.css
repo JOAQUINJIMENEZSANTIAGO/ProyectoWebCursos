@@ -1,4 +1,4 @@
-div.inputCurso {
+div.findSelect {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
     padding: 40px 0 5px;
@@ -7,7 +7,7 @@ div.inputCurso {
     z-index: 6;
 }
 
-div.inputCurso input {
+div.findSelect input {
     display: block;
     margin: auto auto 50px;
     text-align: center;

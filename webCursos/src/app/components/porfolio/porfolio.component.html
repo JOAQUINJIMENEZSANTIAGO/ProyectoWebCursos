@@ -1,6 +1,18 @@
 <div>
-    <header>
-        <h1>Portfolio</h1>
-    </header>
-
+    <div class="findSelect">
+        <select >
+            <option *ngFor="let technologie of technologies" value={{technologie}}>{{technologie}}</option>
+          </select>
+    </div>
+    <div class="line">
+        <div *ngFor="let app of AllApps" class="card" style="width: 16rem;">
+          <img src={{app.img}} class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{app.title}}</h5>
+            <p class="card-text">{{app.title}}</p>
+            <a *ngIf="!app.view">Proximamente ...</a>
+            <a *ngIf="app.view" routerLink={{app.title}}>Ver más</a>
+          </div>
+        </div>
+      </div>
 </div>

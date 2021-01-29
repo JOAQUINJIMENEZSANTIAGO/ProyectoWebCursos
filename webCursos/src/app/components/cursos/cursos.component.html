@@ -1,19 +1,18 @@
-<div class="inputCurso">
+<div class="findSelect">
   <input type="text" placeholder="Busca un curso" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
 </div>
-<!-- todo: volver a los cursos no funciona pasar variable -->
 <p *ngIf="resultInput" (click)="onClick()" class="button">Volver a todos los cursos <i class="fas fa-undo"></i>  
 <p>
 <p class="noFind" *ngIf="alertNoFind ">{{alertNoFind}}</p>
 <p class="noFind" *ngIf="alertEmpety">{{alertEmpety}}</p>
 <div class="line">
-  <div *ngFor="let curso of cursos" class="card" style="width: 12rem;">
+  <div  *ngFor="let curso of cursos" class="card" style="width: 12rem;">
     <img src={{curso.img}} class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">{{curso.title}}</h5>
       <p class="card-text">{{curso.description}}</p>
-      <a *ngIf="curso.finished == false">Proximamente ...</a>
-      <a *ngIf="curso.finished == true " routerLink={{curso.title}}>Ver más</a>
+      <a *ngIf="!curso.finished">Proximamente ...</a>
+      <a *ngIf="curso.finished" routerLink={{curso.title}}>Ver más</a>
     </div>
   </div>
 </div>

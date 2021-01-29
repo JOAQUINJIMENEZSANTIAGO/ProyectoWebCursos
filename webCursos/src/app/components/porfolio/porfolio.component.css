@@ -1,3 +1,17 @@
-h1 {
-    text-align: center;
+div select  {
+    display: block;
+    margin: auto auto 40px;
+}
+div.line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.findSelect {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
+    padding: 40px 0 5px;
+    position: sticky;
+    top: 45px;
+    z-index: 6;
 }
