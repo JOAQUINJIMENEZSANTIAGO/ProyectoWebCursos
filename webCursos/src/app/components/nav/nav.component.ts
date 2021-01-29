@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { RoutingService } from 'src/app/services/routing.service';
+
 
 @Component({
   selector: 'app-nav',
@@ -7,13 +8,22 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  nav: string[];
+  @Output() portfolioTitle = new EventEmitter<string>();
+  @Output() cursosTitle: string;
+  @Output() aboutTitle: string;
   
-  constructor() {
-    
+  constructor(private routingService: RoutingService) {
+    this.nav = ["Portfolio","Cursos","Sobre mi"];
    }
 
-  ngOnInit(): void {
-   
+  async ngOnInit(){
+   try {
+     this.nav = await this.routingService.getAllRouting();
+     
+   } catch (error) {
+     console.log(error);
+   }
   }
 
 }

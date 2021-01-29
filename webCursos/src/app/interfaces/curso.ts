@@ -1,8 +1,8 @@
 export interface Curso {
-    id: number;
-    title: string;
+    id: number,
+    title: string,
     description: string;
-    rooting: string;
-    img: string;
-    finished: boolean;
+    router: string,
+    img: string,
+    finished: boolean
 }

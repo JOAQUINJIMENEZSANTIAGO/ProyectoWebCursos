@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { CursosService } from 'src/app/services/cursos.service';
+import { RoutingService } from 'src/app/services/routing.service';
 
 @Component({
   selector: 'app-plantilla-curso',
@@ -6,10 +9,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./plantilla-curso.component.css']
 })
 export class PlantillaCursoComponent implements OnInit {
+  cursos: string[];
+  title: string;
+  stringRouter: string[];
+  returnRouter: string;
 
-  constructor() { }
+  constructor(private router: Router, private cursosService: CursosService, private routingService: RoutingService) {
+    this.cursos = [];
+    this.stringRouter = [];
+    this.returnRouter = "";
 
-  ngOnInit(): void {
+  }
+
+  async ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo(0, 0)
+    });
+    try {
+      this.cursos = await this.cursosService.getTitleAllCursos()
+      this.title = this.cursos[0]
+
+      this.stringRouter = await this.routingService.getAllRouting();
+      this.returnRouter = "/" + this.stringRouter[1]
+    } catch (error) {
+      console.log(error);
+    }
+
   }
 
 }

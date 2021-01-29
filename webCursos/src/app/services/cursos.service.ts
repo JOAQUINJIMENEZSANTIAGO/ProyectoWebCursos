@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import {CURSOS} from '../db/cursos.db';
+import {DATA} from '../db/db'
 import {Curso} from '../interfaces/curso';
-// importo la db creada en el fichero y la interface 
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +10,10 @@ export class CursosService {
   constructor( ) { 
   }
   
-  // creo un a funcion que retorna una promesa tipo curso de la db y me cencioro de que el array no esta vacio
   getAllCursos(): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
-      if (CURSOS.length > 0) {
-        resolve(CURSOS);
+      if (DATA.cursos.length > 0) {
+        resolve(DATA.cursos);
       } else {
         reject("Data base empety");
       }
@@ -23,13 +21,23 @@ export class CursosService {
   }
   getCursosIncludesLetter(parameter): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
-      if (CURSOS.length > 0) {
-        let result = CURSOS.filter(cursos => cursos.title.toLowerCase().includes(parameter.toLowerCase()));
+      if (DATA.cursos.length > 0) {
+        let result = DATA.cursos.filter(cursos => cursos.title.toLowerCase().includes(parameter.toLowerCase()));
         resolve (result);
       } else {
         reject("No hay ningun curso")
       }
     });
+  }
+  getTitleAllCursos(): Promise<string[]> {
+    return new Promise<string[]>((resolve, reject )=>{
+      let result = []
+      DATA.cursos.forEach(element => {
+       result.push(element.title) 
+      });
+      resolve(result)
+      reject("error")
+    })
   }
 
 }

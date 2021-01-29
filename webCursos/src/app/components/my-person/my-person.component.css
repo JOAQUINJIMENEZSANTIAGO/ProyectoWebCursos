@@ -10,14 +10,14 @@ p {
     width: 70% ;
     margin: auto auto 15px;
     color:var(--text-color-second) ;
-    animation: transitionP .7s ease-in-out;
+    animation: transitionP .8s ease-in-out;
 }
 @keyframes transitionP {
     0% {
         transform: translateX(-100vw);
         color: white;
     }
-    30% {
+    70% {
         color: white;
     }
 }

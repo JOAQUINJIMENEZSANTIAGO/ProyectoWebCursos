@@ -3,7 +3,7 @@ div.inputCurso {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
     padding: 40px 0 5px;
     position: sticky;
-    top: 50px;
+    top: 45px;
     z-index: 6;
 }
 

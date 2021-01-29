@@ -1,5 +1,3 @@
 <nav>
-  <a routerLink="portfolio" routerLinkActive="activateLink">Portfolio</a>
-  <a routerLink="cursos"  routerLinkActive="activateLink">Cursos</a>
-  <a routerLink="myPerson" routerLinkActive="activateLink">Sobre Mi</a>
+  <a *ngFor="let text of nav" routerLink={{text}} routerLinkActive="activateLink">{{text}}</a>
 </nav>

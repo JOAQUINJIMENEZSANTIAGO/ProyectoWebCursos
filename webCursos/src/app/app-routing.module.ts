@@ -6,14 +6,16 @@ import { CursosComponent } from './components/cursos/cursos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { MyPersonComponent } from './components/my-person/my-person.component';
 import { PorfolioComponent } from './components/porfolio/porfolio.component';
+import { DATA } from "./db/db"
 
 const routes: Routes = [
-  {path: "", component: InicioComponent},
-  {path: "portfolio", component: PorfolioComponent},
-  {path: 'myPerson', component: MyPersonComponent},
-  {path: "cursos", component: CursosComponent},
-  {path: "cursos/cursoJS", component:CursoJSComponent},
-  {path: "cursos/cursoAngularJS", component:CursoAngularJSComponent}
+  { path: "", component: InicioComponent },
+  { path: DATA.router[0], component: PorfolioComponent },
+  { path: DATA.router[2], component: MyPersonComponent },
+  { path: DATA.router[1], component: CursosComponent },
+  { path: DATA.router[1] + "/" + DATA.cursos[0].title, component: CursoJSComponent },
+  { path: DATA.router[1] + "/" + DATA.cursos[1].title, component: CursoAngularJSComponent },
+  { path: "**", pathMatch: "full", redirectTo: DATA.router[0] }
 ];
 
 @NgModule({

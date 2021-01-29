@@ -44,13 +44,12 @@ export class CursosComponent implements OnInit {
 
 
   async onChange(event) {
+    let eventTrim = event.trim();
     try {
-      this.cursos = await this.CursosService.getCursosIncludesLetter(event);
+      this.cursos = await this.CursosService.getCursosIncludesLetter(eventTrim);
       if (this.cursos.length == 0) {
         this.alertNoFind = "Busqueda sin resultado, el titulo del curso no contiene los caracteres introducidos";
       }else { this.alertNoFind = ""}
-      
-      console.log(this.cursos.length);
     } catch (error) {
       console.log(error); 
     }
