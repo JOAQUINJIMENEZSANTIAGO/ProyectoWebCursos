@@ -14,6 +14,8 @@ import { PorfolioComponent } from './components/porfolio/porfolio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { CursoAngularJSComponent } from './components/curso-angular-js/curso-angular-js.component';
+import { PlantillaCursoComponent } from './components/plantilla-curso/plantilla-curso.component';
 
 
 
@@ -28,6 +30,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     CursosComponent,
     PorfolioComponent,
     InicioComponent,
+    CursoAngularJSComponent,
+    PlantillaCursoComponent,
   ],
   imports: [
     BrowserModule,

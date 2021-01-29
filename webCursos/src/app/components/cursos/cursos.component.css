@@ -25,12 +25,10 @@ p.button {
     font-size: 20px;
     padding: 20px 0 40px;
     transition: all .2s ease-in-out;
-    /* width: max-content; */
     animation: linkVolver .3s ease;
     position: sticky;
     top: 130px;
     z-index: 6;
-    /* background: rgb(255, 255, 255); */
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -66,7 +64,7 @@ div.line div.card-body p.card-text {
     margin-bottom: 40px;
 }
 
-div.line div.card-body a.btn-primary {
+div.line div.card-body a {
     position: absolute;
     bottom: 10px;
     left: 10px;

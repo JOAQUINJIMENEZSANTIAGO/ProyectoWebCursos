@@ -1,0 +1,57 @@
+<div class=" relative">
+    <p class="returnCursos" routerLink="/cursos">Volver a todos los cursos <i class="fas fa-undo"></i></p>
+    <div class="textCurso">
+        <header>
+            <h1 class="title1Cursos">AngularJS</h1>
+        </header>
+        <section>
+            <h2>Primeros pasos con Angular</h2>
+            <article>
+                <h3>Instalar Angular</h3>
+                <ul>
+                    <li>A través de npm: ><strong> npm install -g @angular/cli</strong></li>
+                    <li>Comprobamos la instalación: ><strong> ng --version</strong></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Iniciar el proyecto</h3>
+                <ul>
+                    <li>Crear proyecto: ><strong> ng new nombreProyecto</strong></li>
+                    <li>Para levantar el servidor en el puerto http://localhost:4200 : ><strong> ng serve</strong>
+                        tambien
+                        puedes incluir el comando: <strong>-o</strong> y se abrira el navegador por defecto. </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Comandos para crear elementos</h3>
+                <ul>
+                    <li>><strong> ng generate tipoDeElemento nombre </strong></li>
+                    <li>Tipos de elementos: <strong>component, directive, route, pipe, service, class, interface y
+                            enum</strong></li>
+                    <li>Ejemplos:
+                        <ol>
+                            <li>><strong> ng generate component inicio</strong></li>
+                            <li>><strong> ng g c inicio, </strong> ejemplo anterior simplificado.</li>
+                            <li>><strong> ng generate intrface interfaces/persona</strong>, se puede crear una ruta para
+                                mayor organizacion.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Build del proyecto</h3>
+                <ul>
+                    <li>> <strong>ng build</strong></li>
+                    <li>> <strong>Si se necesita empaquetar el codigo añadir el sufijo <strong>--prod</strong></strong>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <p>Los componentes son vistas que se pueden reutilizar y organizar en función de las necesidades de nuestro
+                proyecto</p>
+            <img src="../../../assets/images/code.png">
+        </section>
+    </div>
+</div>

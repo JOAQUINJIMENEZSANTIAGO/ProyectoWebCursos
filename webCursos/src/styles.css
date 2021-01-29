@@ -10,8 +10,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* cursos */
 p.returnCursos {
-    /* background: rgb(186, 14, 14); */
     background: linear-gradient(180deg, rgb(255, 255, 255) 87%, rgba(255, 255, 255, 0) 100%);
     padding-bottom: 30px;
     position: sticky;
@@ -19,7 +19,7 @@ p.returnCursos {
     top: 50px;
     width: 100%;
     text-align: right;
-    animation: returnCursos 1.5s ease;
+    animation: returnCursos 2s ease;
     z-index: 10;
 }
 
@@ -29,20 +29,33 @@ p.returnCursos:hover {
 }
 
 div.textCurso {
-    animation: textCurso 1s ease;
+    animation: textCurso 1s ease-in-out;
+}
+
+img[src^="../../../assets"] {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition:all .1s ease-in-out;
 }
 @keyframes textCurso {
     0% {
         transform: translateX(100vw);
         color: white;
     }
-    30% {
+    50% {
         color: white;
     }
 }
 @keyframes returnCursos {
     0% {
-    
+        
+        color: white;
+    }
+    80% {
         color: white;
     }
 }
+/* fin cursos */
