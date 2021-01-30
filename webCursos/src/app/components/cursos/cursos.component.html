@@ -1,7 +1,7 @@
 <div class="findSelect">
   <input type="text" placeholder="Busca un curso" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
 </div>
-<p *ngIf="resultInput" (click)="onClick()" class="button">Volver a todos los cursos <i class="fas fa-undo"></i>  
+<p *ngIf="resultInput" (click)="onClick()" class="button">{{btnReturn | lowercase}} <i class="fas fa-undo"></i>  
 <p>
 <p class="noFind" *ngIf="alertNoFind ">{{alertNoFind}}</p>
 <p class="noFind" *ngIf="alertEmpety">{{alertEmpety}}</p>

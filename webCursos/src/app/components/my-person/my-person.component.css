@@ -1,10 +1,13 @@
 div.image {
-    background-image: url("../../../assets/images/photo.jpeg");
     width: 200px;
     height: 200px;
-    background-size: contain;
     margin: auto auto 60px;
     animation: transitionImg .3s ease-in-out;
+}
+img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 p {
     width: 70% ;

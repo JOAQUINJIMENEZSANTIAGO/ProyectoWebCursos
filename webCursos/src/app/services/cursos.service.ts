@@ -12,8 +12,9 @@ export class CursosService {
   
   getAllCursos(): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
-      if (DATA.cursos.length > 0) {
-        resolve(DATA.cursos);
+      let result = DATA.cursos;
+      if (result && DATA.cursos.length > 0) {
+        resolve(result);
       } else {
         reject("Data base empety");
       }
@@ -21,8 +22,8 @@ export class CursosService {
   }
   getCursosIncludesLetter(parameter): Promise<Curso[]> {
     return new Promise<Curso[]>((resolve, reject)=> {
-      if (DATA.cursos.length > 0) {
-        let result = DATA.cursos.filter(cursos => cursos.title.toLowerCase().includes(parameter.toLowerCase()));
+      let result =  DATA.cursos.filter(cursos => cursos.title.toLowerCase().includes(parameter.toLowerCase()));
+      if (result && DATA.cursos.length > 0) {
         resolve (result);
       } else {
         reject("No hay ningun curso")
@@ -35,8 +36,11 @@ export class CursosService {
       DATA.cursos.forEach(element => {
        result.push(element.title) 
       });
-      resolve(result)
-      reject("error")
+      if (result) {
+        resolve(result)
+      } else {
+        reject("error")
+      }
     })
   }
 

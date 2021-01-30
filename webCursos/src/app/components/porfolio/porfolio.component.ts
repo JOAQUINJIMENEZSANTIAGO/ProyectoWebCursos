@@ -28,7 +28,7 @@ export class PorfolioComponent implements OnInit {
     try {
       this.technologies = await this.appsService.getAllTechnologies();
       this.AllApps = await this.appsService.getAllApps();
-      console.log(this.AllApps);
+      // console.log(this.AllApps);
 
     } catch (error) {
       console.log(error);

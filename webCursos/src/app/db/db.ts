@@ -52,7 +52,7 @@ export const DATA: any = {
             technologies: ["AngularJS", "ExpressJS"],
             img: "",
             view: false
-        },{
+        }, {
             id: 2,
             title: "papel",
             description: " descripcion",
@@ -62,8 +62,43 @@ export const DATA: any = {
         }
     ],
     technologies: [
-        "Todas las apps","AngularJS", "Javascript vanilla", "NodeJS", "ExpressJS"
+        "Todas las apps", "AngularJS", "Javascript vanilla", "NodeJS", "ExpressJS"
     ],
-    router: ["Portfolio", "Cursos", "Sobre Mi"]
+    router: [
+        "Portfolio", "Cursos", "Sobre Mi"
+    ],
+    author: {
+        name: "Raul tejero",
+        roll: "Desarollador web",
+        contact: {
+            tel: "+34 699 974 315",
+            mail: "raultejeromartos@gmail.com"
+        },
+        social: [
+            {
+                linkedin: {
+                    url: "https://www.linkedin.com/in/raul-tejero-martos-302569167/",
+                    img: "",
+                    classFontAwesome: "fab fa-linkedin"
+                }
+            },
+            {
+                twitter:
+                {
+                    url: "https://twitter.com/Raul_te_ma",
+                    img: "",
+                    classFontAwesome: "fab fa-twitter-square"
+                }
+            }, 
+            {
+                github: {
+                    url: "https://github.com/RaulTejero",
+                    img: "",
+                    classFontAwesome: "fab fa-github-square"
+                }
+            }
 
+        ],
+        photo: "../assets/images/photo.jpeg"
+    }
 }

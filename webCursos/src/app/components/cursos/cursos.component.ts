@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/interfaces/curso';
 import { CursosService } from 'src/app/services/cursos.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { RoutingService } from 'src/app/services/routing.service';
 
 @Component({
   selector: 'app-cursos',
@@ -16,13 +17,17 @@ export class CursosComponent implements OnInit {
   alertEmpety: String;
   cursosLenght: Number;
   textAlert: string;
+  routerNav: string[];
+  btnReturn: string;
 
 
-  constructor(private CursosService: CursosService, private router: Router) {
+  constructor(private CursosService: CursosService, private router: Router, private routerService: RoutingService) {
     this.resultInput = "";
     this.alertEmpety = "";
     this.alertNoFind = "";
     this.textAlert = "No hay cursos disponibles"
+    this.routerNav = [];
+    this.btnReturn = "";
 
   }
 
@@ -33,13 +38,19 @@ export class CursosComponent implements OnInit {
       }
       window.scrollTo(0, 0)
     });
-    // nada mas iniciar el componnete consumo la peticio de todos los cursos 
+
     try {
       this.cursos = await this.CursosService.getAllCursos();
     } catch (error) {
       console.log(error);
       this.alertEmpety = this.textAlert;
     }
+    try {
+      this.routerNav = await this.routerService.getAllRouting();
+    } catch (error) {
+      console.log("error");
+    }
+    this.btnReturn = "Volver a todos los " + this.routerNav[1]
   }
 
 

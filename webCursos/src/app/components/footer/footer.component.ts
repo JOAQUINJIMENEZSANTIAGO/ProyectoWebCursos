@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  contact: any;
+  socials: any;
+  tlf: string;
+  mail: string;
+  hrefMail: string;
+  hrefTlf: string;
+  socialFirst: any;
 
-  constructor() { }
+  constructor(private contactservice: ContactService) {
+    this.tlf = "";
+    this.mail = "";
+    this.hrefMail = "";
+    this.hrefTlf = "";
+  }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    try {
+      this.contact = await this.contactservice.getContact();
+      this.tlf = this.contact.tel;
+      this.mail = this.contact.mail;
+      this.hrefMail = "mailto:" + this.mail;
+      this.hrefTlf = "tel:" + this.tlf;
+
+      this.socials = await this.contactservice.getAllSocials();
+
+      for (const social of this.socials) {
+        console.log(social);
+        console.log(social.linkedin);
+        // TODO: terminar el ts y el html
+        
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 }

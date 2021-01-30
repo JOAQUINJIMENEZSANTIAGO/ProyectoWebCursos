@@ -12,8 +12,12 @@ export class RoutingService {
 
   getAllRouting(): Promise<any> {
     return new Promise<any>((resolve, reject)=>{
-      resolve (DATA.router);
-      reject("error")
+      let result = DATA.router
+      if (result) {
+        resolve (DATA.router);
+      } else {
+        reject("error")
+      } 
     })
   }
 
