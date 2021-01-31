@@ -61,9 +61,9 @@ export const DATA: any = {
             view: false
         }
     ],
-    technologies: [
-        "Todas las apps", "AngularJS", "Javascript vanilla", "NodeJS", "ExpressJS"
-    ],
+    // technologies: [
+    //     "Todas las apps", "AngularJS", "Javascript vanilla", "NodeJS", "ExpressJS"
+    // ],
     router: [
         "Portfolio", "Cursos", "Sobre Mi"
     ],

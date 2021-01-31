@@ -42,22 +42,12 @@ export class AppsService {
   }
   getFilterAppsForTechnologies(technologie): Promise<App[]> {
     return new Promise<App[]>((resolve, reject) => {
-      console.log(DATA.apps);
-      
-      let result = [];
-      let filter = DATA.apps.forEach(element => {
-       
-        result.push( element.technologies);
-      });
-      console.log(result);
-
-      // console.log(result)
-
-      // if (result) {
-      //   resolve(result);
-      // } else {
-      //   reject("error");
-      // }
+      let result = DATA.apps.filter(el=>el.technologies.includes(technologie))
+      if (result) {
+        resolve(result);
+      } else {
+        reject("error");
+      }
     })
   }
 

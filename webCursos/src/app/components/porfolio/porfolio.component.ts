@@ -17,7 +17,7 @@ export class PorfolioComponent implements OnInit {
   valueSelect: string;
 
   constructor(private appsService: AppsService, private router: Router) {
-this.valueSelect= "";
+    this.valueSelect = "";
   }
 
   async ngOnInit() {
@@ -29,25 +29,22 @@ this.valueSelect= "";
     });
     try {
       this.technologies = await this.appsService.getAllTechnologies();
-      // console.log(this.technologies);
-      
+
       this.AllApps = await this.appsService.getAllApps();
-    } catch (error) {
+    }
+    catch (error) {
       console.log(error);
     }
 
   }
   async change(event) {
     this.valueSelect = event.target.value
-    console.log(this.valueSelect);
     try {
-      this.appsService.getFilterAppsForTechnologies(event);
-      // console.log(result);
-      
-    } catch (error) {
+     this.AllApps = await this.appsService.getFilterAppsForTechnologies(this.valueSelect);
+    }
+    catch (error) {
       console.log(error);
     }
   }
 
-  // TODO: filtrar por select 
 }
