@@ -6,14 +6,16 @@ div select {
     border: 1px solid rgb(0, 0, 0);
     animation: changeInput .5s ease-in-out;
 }
+
 div select option:hover {
     background-color: red;
 }
+
 div.line {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
+
 div.findSelect {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
@@ -22,11 +24,49 @@ div.findSelect {
     top: 45px;
     z-index: 6;
 }
+
 div.line div.card {
     animation: containerCursos .3s ease-in-out;
-    margin-bottom: 60px;
     border-radius: 0;
+    width: 25%;
+    padding: 20px;
+    border: none;
 }
+div.line div.card-body {
+    position: relative;
+    border: 1px solid rgb(0, 0, 0);
+    padding-bottom: 50px;
+}
+
+img, iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    border: .5px solid rgb(0, 0, 0);
+}
+
+p.site {
+    font-size: 13px;
+    margin-top: -20px;
+    text-align: end;
+    color: var( --text-color-second)
+}
+p.card-text {
+    color: var( --text-color-second);
+}
+a.view{
+    position: absolute; 
+    bottom: 20px;
+    left: 20px;
+}
+
+a:last-child {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
 
 @keyframes changeInput {
     0% {
@@ -42,8 +82,27 @@ div.line div.card {
         appearance: none;
     }
 }
+
 @keyframes containerCursos {
     0% {
         transform: scale(.01);
+    }
+}
+
+@media (max-width:1200px) {
+    div.line div.card {
+        width: 33.333%;
+    }
+}
+
+@media (max-width:800px) {
+    div.line div.card {
+        width: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    div.line div.card {
+        width: 100%;
     }
 }

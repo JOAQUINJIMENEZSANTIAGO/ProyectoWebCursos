@@ -1,13 +1,14 @@
 div {
     height: 50vh;
     position: relative;
-
 }
 
 div h2 {
     font-weight: 900;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
+    margin: auto auto 0px;
+    color: rgb(100, 100, 100);
 }
 
 div h2:first-child {
@@ -16,7 +17,6 @@ div h2:first-child {
 }
 
 div h2:nth-child(2) {
-    
     animation-name: change2;
     animation-duration: 10s;
 }
@@ -41,20 +41,15 @@ div h2:nth-child(6) {
     animation-duration: 5s;
 }
 
-
-
-
 @keyframes change {
     0% {
         color: white;
         transform: translate(300px, 300px);
         font-size: 10px;
-        font-weight: 300;  
-    }
-    99% {
-        color: black;
+        font-weight: 300;
     }
 }
+
 @keyframes change2 {
     0% {
         color: white;
@@ -62,10 +57,8 @@ div h2:nth-child(6) {
         font-size: 50px;
         font-weight: 300;
     }
-    100% {
-        color: black;
-    }
 }
+
 @keyframes change3 {
     0% {
         color: white;
@@ -76,21 +69,17 @@ div h2:nth-child(6) {
     60% {
         color: white;
     }
-    100% {
-        clear: black;
-    }
 }
+
 @keyframes change4 {
     0% {
         color: white;
         transform: translate(130px, -40px);
-        font-size:  5px;
+        font-size: 5px;
         font-weight: 500;
     }
-    80% {
-        color: black;
-    }
 }
+
 @keyframes change5 {
     0% {
         color: white;
@@ -98,10 +87,8 @@ div h2:nth-child(6) {
         font-size: 2px;
         font-weight: initial;
     }
-    90% {
-        color: black;
-    }
-} 
+}
+
 @keyframes change5 {
     0% {
         color: white;
@@ -109,7 +96,4 @@ div h2:nth-child(6) {
         font-weight: none;
         font-size: 70px;
     }
-    90% {
-        color: black;
-    }
-} 
+}

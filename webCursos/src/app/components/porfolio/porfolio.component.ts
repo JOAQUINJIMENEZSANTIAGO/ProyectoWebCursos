@@ -38,13 +38,23 @@ export class PorfolioComponent implements OnInit {
 
   }
   async change(event) {
-    this.valueSelect = event.target.value
+    this.valueSelect = event.target.value;
     try {
-     this.AllApps = await this.appsService.getFilterAppsForTechnologies(this.valueSelect);
+      if (this.valueSelect == "todas") {
+        this.AllApps = await this.appsService.getAllApps();
+      } else {
+        this.AllApps = await this.appsService.getFilterAppsForTechnologies(this.valueSelect);
+     console.log(this.valueSelect);
+      }
+     
+     
     }
     catch (error) {
       console.log(error);
     }
+  }
+  click() {
+    // TODO: buscar angular redirect to url
   }
 
 }

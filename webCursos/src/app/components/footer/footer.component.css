@@ -5,6 +5,7 @@ div {
 div p {
     text-align: center;
     color: white;
+    font-size: 12px;
 }
 div nav {
     display: flex;

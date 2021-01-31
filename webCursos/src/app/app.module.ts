@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { CursoAngularJSComponent } from './components/curso-angular-js/curso-angular-js.component';
 import { PlantillaCursoComponent } from './components/plantilla-curso/plantilla-curso.component';
+import { ViewAppComponent } from './components/view-app/view-app.component';
 
 
 
@@ -32,6 +33,7 @@ import { PlantillaCursoComponent } from './components/plantilla-curso/plantilla-
     InicioComponent,
     CursoAngularJSComponent,
     PlantillaCursoComponent,
+    ViewAppComponent,
   ],
   imports: [
     BrowserModule,

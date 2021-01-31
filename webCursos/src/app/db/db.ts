@@ -20,50 +20,61 @@ export const DATA: any = {
             description: "Varios comandos que debes saber con Git",
             img: "../../../assets/images/gitt.png",
             finished: false
-        },
-        {
-            id: 2,
-            title: "AngularJS",
-            description: "Unos de los framework mas utilizados mundialmente",
-            img: "../../../assets/images/angular.png",
-            finished: true
-        },
-        {
-            id: 3,
-            title: "Git",
-            description: "Varios comandos que debes saber con Git",
-            img: "../../../assets/images/gitt.png",
-            finished: false
         }
+
     ],
     apps: [
         {
-            id: 1,
-            title: "RickyMortin",
+            id: 5,
+            type: "Proyecto personal",
+            site: "https://appblog-68dfd.web.app/blog",
+            title: "Portfolio",
             description: " descripcion",
-            technologies: ["NodeJS", "ExpressJS"],
-            img: "",
+            technologies: ["Bootstrap", " Angular JS"," Git"],
+            img: "../../../assets/images/Screenshot_2021-01-31 CursoJS.png",
+            view: false
+        },
+        {
+            id: 4,
+            type: "Participación",
+            site: "https://appblog-68dfd.web.app/blog",
+            title: "CalculaTuCompra",
+            description: " descripcion",
+            technologies: ["Bootstrap", " Angular JS"," Express JS", " Node JS"," prime ng"," Api Google MAps", " Git"],
+            img: "../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png",
+            view: false
+        }
+        ,
+        {
+            id: 3,
+            type: "Proyecto personal",
+            site: "https://appblog-68dfd.web.app/blog",
+            title: "blog",
+            description: " descripcion",
+            technologies: ["Bootstrap", " Angular JS", " Git"],
+            img: "../../../assets/images/blog.png",
             view: true
         },
         {
-            id: 3,
-            title: "blog",
-            description: " descripcion",
-            technologies: ["AngularJS", "ExpressJS"],
-            img: "",
-            view: false
-        }, {
             id: 2,
-            title: "papel",
+            type: "Proyecto personal",
+            site: "https://todo-d615f.web.app/",
+            title: "toDo",
+            description: "App para listas jbefji efjkfhwef jhwefh efljefi",
+            technologies: ["Javascript vanilla"],
+            img: "../../../assets/images/todo.jpg",
+            view: true
+        }, {
+            id: 1,
+            type: "Proyecto personal",
+            site: "https://hamburgueseria-5d0f3.firebaseapp.com/",
+            title: "One Page",
             description: " descripcion",
-            technologies: ["pepito"],
-            img: "",
-            view: false
+            technologies: ["Bootstrap", " HTML5", " CSS"],
+            img: "../../../assets/images/hamburgueseria.jpg",
+            view: true
         }
     ],
-    // technologies: [
-    //     "Todas las apps", "AngularJS", "Javascript vanilla", "NodeJS", "ExpressJS"
-    // ],
     router: [
         "Portfolio", "Cursos", "Sobre Mi"
     ],

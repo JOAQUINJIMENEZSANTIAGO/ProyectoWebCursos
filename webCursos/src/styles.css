@@ -29,12 +29,13 @@ p.returnCursos:hover {
 }
 
 div.textCurso {
-    animation: textCurso 1s ease-in-out;
+    animation: textCurso .6s ease-in-out;
+    position: relative;
 }
 
 img[src^="../../../assets"] {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin: auto;
@@ -57,6 +58,20 @@ img[src^="../../../assets"] {
     80% {
         color: white;
     }
+}
+
+div.bannerAlert {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.885);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+div.bannerAlert p {
+    margin-top: 120px;
 }
 /* fin cursos */
 div.findSelect {

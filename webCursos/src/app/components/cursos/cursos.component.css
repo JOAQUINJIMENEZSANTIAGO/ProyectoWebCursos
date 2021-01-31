@@ -5,15 +5,21 @@ div.findSelect {
     position: sticky;
     top: 45px;
     z-index: 6;
+    text-align: center;
 }
 
 div.findSelect input {
-    display: block;
     margin: auto auto 50px;
     text-align: center;
-    background-color: rgb(238, 238, 238);
-    border: none;
+    border: 1px solid black;
     animation: changeInput .5s ease-in-out;
+    margin-right: 10px;
+}
+div.findSelect i {
+    top:47px;
+    right: 350px;
+    color: rgb(70, 70, 70);
+    animation: find 1s ease-in-out;
 }
 
 p.button {
@@ -48,13 +54,14 @@ p.noFind {
 div.line {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 div.line div.card {
     animation: containerCursos .3s ease-in-out;
-    margin-bottom: 60px;
     border-radius: 0;
+    width: 20%;
+    padding: 20px;
+    border: none;
 }
 img {
     display: block;
@@ -74,7 +81,7 @@ div.line div.card-body p.card-text {
 div.line div.card-body a {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 20px;
 }
 
 @keyframes linkVolver {
@@ -98,5 +105,46 @@ div.line div.card-body a {
     30% {
         background-color: white;
         color: white;
+    }
+}
+@keyframes find {
+    0% {
+        transform: scale(0);
+        color: white;
+    }
+    70% {
+        transform: rotateZ(20deg);
+    }
+    75% {
+        transform: rotateZ(-20deg);
+    }
+    80% {
+        transform: rotateZ(20deg);
+    }
+    85% {
+        transform: rotateZ(-20deg);
+    }
+    90% {
+        transform: rotateZ(20deg);
+    }
+    95% {
+        transform: rotateZ(-20deg);
+    }
+}
+@media (max-width:1200px) {
+    div.line div.card {
+        width: 25%;
+    }
+}
+
+
+@media  (max-width:800px) {
+    div.line div.card {
+        width: 50%;
+    }
+}
+@media (max-width:600px) {
+    div.line div.card {
+        width: 100%;
     }
 }

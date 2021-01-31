@@ -1,17 +1,21 @@
 <div>
     <div class="findSelect">
         <select  (change)="change($event)">
+          <option value="todas">Todas las tecnologias</option>
             <option *ngFor="let technologie of technologies" value={{technologie}}>{{technologie | titlecase}}</option>
           </select>
     </div>
     <div class="line">
-        <div *ngFor="let app of AllApps" class="card" style="width: 16rem;">
+        <div *ngFor="let app of AllApps" class="card" >
           <img src={{app.img}} class="card-img-top">
           <div class="card-body">
+            <p class="site">{{app.type}}</p>
             <h5 class="card-title">{{app.title}}</h5>
-            <p class="card-text">{{app.title}}</p>
-            <a *ngIf="!app.view">Proximamente ...</a>
-            <a *ngIf="app.view" routerLink={{app.title}}>Ver más</a>
+            <p class="card-text">{{app.technologies }}</p>
+            <a class="view" (click)="click()">Leer mas</a>
+            <!-- TODO: no router -->
+            <a *ngIf="!app.view"></a>
+            <a *ngIf="app.view" target="_blank" href={{app.site}}>Visitar</a>
           </div>
         </div>
       </div>

@@ -1,12 +1,13 @@
 <div class="findSelect">
   <input type="text" placeholder="Buscar" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
+  <i class="fas fa-search"></i>
 </div>
 <p *ngIf="resultInput" (click)="onClick()" class="button">{{btnReturn | lowercase}} <i class="fas fa-undo"></i>  
 <p>
 <p class="noFind" *ngIf="alertNoFind ">{{alertNoFind}}</p>
 <p class="noFind" *ngIf="alertEmpety">{{alertEmpety}}</p>
 <div class="line">
-  <div  *ngFor="let curso of cursos" class="card" style="width: 12rem;">
+  <div  *ngFor="let curso of cursos" class="card"  >
     <img src={{curso.img}} class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">{{curso.title}}</h5>
