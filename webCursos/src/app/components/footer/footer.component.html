@@ -1,13 +1,8 @@
 <div>
-  
     <div>
-        <!-- <nav>
-            <a href={{urlGitHub}} target="_blank"><i class={{iGitHub}}></i></a>
-            <a href={{urlLinkedin}} target="_blank"><i
-                    class={{iLinkedin}}></i></a>
-            <a href={{urlTwitter}} target="_blank"><i class={{iTwitter}}></i></a>
-        </nav> -->
-        <a *ngFor="let social of socials" href="" >{{social.url}}</a>
+        <nav>
+            <a *ngFor="let social of socials" href={{social.url}} target="_blank" ><i class={{social.classFontAwesome}}></i></a>
+        </nav>   
     </div>
     <div>
         <nav>

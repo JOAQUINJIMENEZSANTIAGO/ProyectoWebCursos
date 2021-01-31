@@ -1,6 +1,13 @@
-div select  {
+div select {
     display: block;
-    margin: auto auto 40px;
+    margin: auto auto 50px;
+    text-align: center;
+    width: 193px;
+    border: 1px solid rgb(0, 0, 0);
+    animation: changeInput .5s ease-in-out;
+}
+div select option:hover {
+    background-color: red;
 }
 div.line {
     display: flex;
@@ -14,4 +21,29 @@ div.findSelect {
     position: sticky;
     top: 45px;
     z-index: 6;
+}
+div.line div.card {
+    animation: containerCursos .3s ease-in-out;
+    margin-bottom: 60px;
+    border-radius: 0;
+}
+
+@keyframes changeInput {
+    0% {
+        transform: translateX(-300px);
+        background-color: white;
+        color: white;
+        border: none;
+        appearance: none;
+    }
+    30% {
+        background-color: white;
+        color: white;
+        appearance: none;
+    }
+}
+@keyframes containerCursos {
+    0% {
+        transform: scale(.01);
+    }
 }

@@ -54,6 +54,13 @@ div.line {
 div.line div.card {
     animation: containerCursos .3s ease-in-out;
     margin-bottom: 60px;
+    border-radius: 0;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
 }
 
 div.line div.card-body {

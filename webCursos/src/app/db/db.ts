@@ -75,27 +75,24 @@ export const DATA: any = {
             mail: "raultejeromartos@gmail.com"
         },
         social: [
+
             {
-                linkedin: {
-                    url: "https://www.linkedin.com/in/raul-tejero-martos-302569167/",
-                    img: "",
-                    classFontAwesome: "fab fa-linkedin"
-                }
+                name: "linkedin",
+                url: "https://www.linkedin.com/in/raul-tejero-martos-302569167/",
+                img: "",
+                classFontAwesome: "fab fa-linkedin"
             },
             {
-                twitter:
-                {
-                    url: "https://twitter.com/Raul_te_ma",
-                    img: "",
-                    classFontAwesome: "fab fa-twitter-square"
-                }
-            }, 
+                name: "Twitter",
+                url: "https://twitter.com/Raul_te_ma",
+                img: "",
+                classFontAwesome: "fab fa-twitter-square"
+            },
             {
-                github: {
-                    url: "https://github.com/RaulTejero",
-                    img: "",
-                    classFontAwesome: "fab fa-github-square"
-                }
+                name: "github",
+                url: "https://github.com/RaulTejero",
+                img: "",
+                classFontAwesome: "fab fa-github-square"
             }
 
         ],

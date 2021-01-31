@@ -8,7 +8,7 @@ import { ContactService } from 'src/app/services/contact.service';
 })
 export class FooterComponent implements OnInit {
   contact: any;
-  socials: any;
+  socials: any[];
   tlf: string;
   mail: string;
   hrefMail: string;
@@ -31,14 +31,6 @@ export class FooterComponent implements OnInit {
       this.hrefTlf = "tel:" + this.tlf;
 
       this.socials = await this.contactservice.getAllSocials();
-
-      for (const social of this.socials) {
-        console.log(social);
-        console.log(social.linkedin);
-        // TODO: terminar el ts y el html
-        
-      }
-      
     } catch (error) {
       console.log(error);
     }

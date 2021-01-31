@@ -1,7 +1,7 @@
 <div>
     <div class="findSelect">
-        <select >
-            <option *ngFor="let technologie of technologies" value={{technologie}}>{{technologie}}</option>
+        <select  (change)="change($event)">
+            <option *ngFor="let technologie of technologies" value={{technologie}}>{{technologie | titlecase}}</option>
           </select>
     </div>
     <div class="line">
