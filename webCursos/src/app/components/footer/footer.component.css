@@ -1,11 +1,15 @@
+div div:first-child {
+    padding-top: 30px;
+}
 div {
     background-color: black;
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 div p {
+    padding: 20px 0 0;
     text-align: center;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
 }
 div nav {
     display: flex;
@@ -15,14 +19,12 @@ div nav {
 div nav a {
     margin: 0 30px;
     color: var(--text-color-footer);
-    font-size: 20px;
+    font-size: 14px;
 }
-div div:last-child nav a {
-    padding: 10px 0;
-}
+
 div nav a i {
     color: var(--text-color-footer);
-    font-size: 40px;
+    font-size: 28px;
     transition:all .3s ease;
 }
 div nav a i:hover {

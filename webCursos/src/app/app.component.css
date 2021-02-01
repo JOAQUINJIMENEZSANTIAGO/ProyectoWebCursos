@@ -1,13 +1,14 @@
 header {
-    padding: 60px 0;
+    padding: 30px 0;
     text-align: center;
 }
 header h1 {
     font-weight: 900;
+    font-size: 32px;
 }
 header h2 {
     color:var(--text-color-second) ;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 div.navb {

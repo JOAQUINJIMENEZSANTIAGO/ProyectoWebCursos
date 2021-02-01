@@ -5,6 +5,7 @@ div select {
     width: 193px;
     border: 1px solid rgb(0, 0, 0);
     animation: changeInput .5s ease-in-out;
+    font-size: 14px;
 }
 
 div select option:hover {
@@ -34,8 +35,8 @@ div.line div.card {
 }
 div.line div.card-body {
     position: relative;
-    border: 1px solid rgb(0, 0, 0);
-    padding-bottom: 50px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    padding: 10px 10px 30px;
 }
 
 img, iframe {
@@ -47,24 +48,31 @@ img, iframe {
 }
 
 p.site {
-    font-size: 13px;
-    margin-top: -20px;
+    font-size: 10px;
+    /* margin-top: -20px; */
+    margin-bottom: 0;
     text-align: end;
     color: var( --text-color-second)
 }
+h5 {
+    font-size: 16px;
+}
 p.card-text {
     color: var( --text-color-second);
+    font-size: 14px;
 }
 a.view{
     position: absolute; 
     bottom: 20px;
-    left: 20px;
+    left: 10px;
+    font-size: 14px;
 }
 
 a:last-child {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
+    font-size: 14px;
 }
 
 
