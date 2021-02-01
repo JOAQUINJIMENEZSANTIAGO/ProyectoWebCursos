@@ -1,7 +1,7 @@
 div.findSelect {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
-    padding: 40px 0 5px;
+    /* padding: 35px 0; */
     position: sticky;
     top: 45px;
     z-index: 6;
@@ -22,9 +22,9 @@ div.findSelect i {
     animation: find 1s ease-in-out;
 }
 
-p.button {
+div.button {
     margin: auto;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     text-align: center;
     color: var(--text-color-second);
     font-weight: 900;
@@ -35,10 +35,11 @@ p.button {
     position: sticky;
     top: 130px;
     z-index: 6;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
 }
+p.button {
 
-p.button:hover {
+}
+div.button p:hover {
     color: black;
     cursor: pointer;
 }

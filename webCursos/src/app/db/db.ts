@@ -40,7 +40,7 @@ export const DATA: any = {
             site: "https://appblog-68dfd.web.app/blog",
             title: "CalculaTuCompra",
             description: " descripcion",
-            technologies: ["Bootstrap", " Angular JS"," Express JS", " Node JS"," prime ng"," Api Google MAps", " Git"],
+            technologies: ["Bootstrap", " Angular JS"," Express JS", " Node JS"," Api Google Maps", " Git"],
             img: ["../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png"],
             view: false
         }
@@ -62,7 +62,7 @@ export const DATA: any = {
             title: "toDo",
             description: "App para listas jbefji efjkfhwef jhwefh efljefi",
             technologies: ["Javascript vanilla"],
-            img: ["../../../assets/images/todo.jpg"],
+            img: ["../../../assets/images/todo.jpg","../../../assets/images/todocode1.png","../../../assets/images/todocode2.png"],
             view: true
         }, {
             id: 1,

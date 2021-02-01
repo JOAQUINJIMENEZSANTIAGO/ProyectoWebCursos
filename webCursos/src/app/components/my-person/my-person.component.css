@@ -3,6 +3,7 @@ div.image {
     height: 200px;
     margin: auto auto 60px;
     animation: transitionImg .3s ease-in-out;
+    margin-top: 40px;
 }
 img{
     width: 100%;

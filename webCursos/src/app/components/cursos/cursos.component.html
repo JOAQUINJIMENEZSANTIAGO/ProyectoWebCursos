@@ -2,8 +2,11 @@
   <input type="text" placeholder="Buscar" *ngIf="!alertEmpety" [(ngModel)]="resultInput" (ngModelChange)="onChange($event)">
   <i class="fas fa-search"></i>
 </div>
-<p *ngIf="resultInput" (click)="onClick()" class="button">{{btnReturn | lowercase}} <i class="fas fa-undo"></i>  
+<div *ngIf="resultInput" class="button">
+  <p  (click)="onClick()" >{{btnReturn | lowercase}} <i class="fas fa-undo"></i>  
 <p>
+</div>
+
 <p class="noFind" *ngIf="alertNoFind ">{{alertNoFind}}</p>
 <p class="noFind" *ngIf="alertEmpety">{{alertEmpety}}</p>
 <div class="line">
