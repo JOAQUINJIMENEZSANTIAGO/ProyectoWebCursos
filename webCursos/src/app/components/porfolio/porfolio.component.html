@@ -7,13 +7,12 @@
     </div>
     <div class="line">
         <div *ngFor="let app of AllApps" class="card" >
-          <img src={{app.img}} class="card-img-top">
+          <img src={{app.img[0]}} class="card-img-top">
           <div class="card-body">
             <p class="site">{{app.type}}</p>
             <h5 class="card-title">{{app.title}}</h5>
             <p class="card-text">{{app.technologies }}</p>
-            <a class="view" (click)="click()">Leer mas</a>
-            <!-- TODO: no router -->
+            <a class="view" routerLink="/viewApp" (click)="click(app.title)" >Leer mas</a>
             <a *ngIf="!app.view"></a>
             <a *ngIf="app.view" target="_blank" href={{app.site}}>Visitar</a>
           </div>

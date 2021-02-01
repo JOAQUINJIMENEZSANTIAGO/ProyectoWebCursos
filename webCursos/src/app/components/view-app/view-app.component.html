@@ -1,1 +1,10 @@
-<p>view-app works!</p>
+<div *ngFor="let app of app">
+    <div>
+        <h1>{{app.title}}</h1>
+        <h3>{{app.technologies}}</h3>
+        <p>{{app.desciption}}</p>
+    </div>
+    <div>
+        <img *ngFor="let img of app.img" src={{img}} alt="imagen">
+    </div>
+</div>

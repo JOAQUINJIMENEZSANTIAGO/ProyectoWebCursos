@@ -6,10 +6,11 @@ import { App } from '../interfaces/app';
   providedIn: 'root'
 })
 export class AppsService {
-
+  titleApp: string;
   constructor() {
-
+  this.titleApp="";
   }
+
   getAllTechnologies(): Promise<string[]> {
     return new Promise<string[]>((resolve, reject) => {
       let result = [];
@@ -40,14 +41,29 @@ export class AppsService {
       reject("error");
     })
   }
-  getFilterAppsForTechnologies(technologie): Promise<App[]> {
+  getFilterAppsForTechnologies(technologie: string): Promise<App[]> {
     return new Promise<App[]>((resolve, reject) => {
-      let result = DATA.apps.filter(el=>el.technologies.includes(technologie))
+      let result = DATA.apps.filter(el => el.technologies.includes(technologie))
       if (result) {
         resolve(result);
       } else {
         reject("error");
       }
     })
+  }
+  getAppsForTitle(title = this.titleApp): Promise<App> {
+    return new Promise<App>((resolve, reject)=>{
+      let result = DATA.apps.filter(el => el.title == title);
+      if (result) {
+        resolve(result);
+      } else {
+        reject("error");
+      }
+    })
+  }
+ 
+  postTittle(event){
+   this.titleApp = event;
+   console.log(this.titleApp);
   }
 }

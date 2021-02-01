@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }from '@angular/core';
+import { App } from 'src/app/interfaces/app';
+import { AppsService } from 'src/app/services/apps.service';
+
 
 @Component({
   selector: 'app-view-app',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-app.component.css']
 })
 export class ViewAppComponent implements OnInit {
+  app: App;
 
-  constructor() { }
+  constructor(private appselect:AppsService) {
 
-  ngOnInit(): void {
+   }
+
+  async ngOnInit() {
+    this.app = await this.appselect.getAppsForTitle();
   }
+  
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { App } from 'src/app/interfaces/app';
 import { AppsService } from 'src/app/services/apps.service';
@@ -15,9 +15,12 @@ export class PorfolioComponent implements OnInit {
   appsSelect: App[];
   optionSelect: string;
   valueSelect: string;
+  selectAppPortfolio: App;
 
   constructor(private appsService: AppsService, private router: Router) {
+
     this.valueSelect = "";
+    ;
   }
 
   async ngOnInit() {
@@ -44,17 +47,14 @@ export class PorfolioComponent implements OnInit {
         this.AllApps = await this.appsService.getAllApps();
       } else {
         this.AllApps = await this.appsService.getFilterAppsForTechnologies(this.valueSelect);
-     console.log(this.valueSelect);
       }
-     
-     
     }
     catch (error) {
       console.log(error);
     }
   }
-  click() {
-    // TODO: buscar angular redirect to url
+  async click(event) {
+    this.selectAppPortfolio = event;
+    this.appsService.postTittle(event);
   }
-
 }

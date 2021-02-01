@@ -28,10 +28,10 @@ export const DATA: any = {
             id: 5,
             type: "Proyecto personal",
             site: "https://appblog-68dfd.web.app/blog",
-            title: "Portfolio",
+            title: "App Portfolio",
             description: " descripcion",
             technologies: ["Bootstrap", " Angular JS"," Git"],
-            img: "../../../assets/images/Screenshot_2021-01-31 CursoJS.png",
+            img: [ "../../../assets/images/Screenshot_2021-01-31 CursoJS.png",],
             view: false
         },
         {
@@ -41,7 +41,7 @@ export const DATA: any = {
             title: "CalculaTuCompra",
             description: " descripcion",
             technologies: ["Bootstrap", " Angular JS"," Express JS", " Node JS"," prime ng"," Api Google MAps", " Git"],
-            img: "../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png",
+            img: ["../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png"],
             view: false
         }
         ,
@@ -52,7 +52,7 @@ export const DATA: any = {
             title: "blog",
             description: " descripcion",
             technologies: ["Bootstrap", " Angular JS", " Git"],
-            img: "../../../assets/images/blog.png",
+            img:["../../../assets/images/blog.png"] ,
             view: true
         },
         {
@@ -62,7 +62,7 @@ export const DATA: any = {
             title: "toDo",
             description: "App para listas jbefji efjkfhwef jhwefh efljefi",
             technologies: ["Javascript vanilla"],
-            img: "../../../assets/images/todo.jpg",
+            img: ["../../../assets/images/todo.jpg"],
             view: true
         }, {
             id: 1,
@@ -71,7 +71,7 @@ export const DATA: any = {
             title: "One Page",
             description: " descripcion",
             technologies: ["Bootstrap", " HTML5", " CSS"],
-            img: "../../../assets/images/hamburgueseria.jpg",
+            img: ["../../../assets/images/hamburgueseria.jpg","../../../assets/images/hamburgueseria.jpg"],
             view: true
         }
     ],
