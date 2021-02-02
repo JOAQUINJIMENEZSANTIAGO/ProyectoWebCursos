@@ -12,9 +12,10 @@ h3 {
 p {
     font-size: 14px;
     text-align: center;
+    animation: texts .7s ease-in-out ;
 }
 img{
-    animation: firstImg 1s ease-in-out;
+    animation: img 1s ease-in-out;
     margin-bottom: 4px;
 }
 
@@ -24,18 +25,20 @@ img{
     transform: scale(0);
     }
 }
-@keyframes technologies {
+@keyframes img {
     0% {
-        color: white;
-    transform: rotateX(90deg);
+    transform: scale(0);
+    transform-origin: left top ;
     }
 }
-@keyframes firstImg {
+@keyframes texts {
     0% {
     transform: scale(0);
     transform-origin: left top ;
     }
     30% {
-        /* transform: rotateY(180deg); */
+       color: white; 
+       transform: translate(-100%);
     }
+
 }
