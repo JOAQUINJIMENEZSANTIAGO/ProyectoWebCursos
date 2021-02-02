@@ -80,6 +80,6 @@ div.findSelect {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
     padding: 40px 0 5px;
     position: sticky;
-    top: 45px;
+    top: 42px;
     z-index: 6;
 }

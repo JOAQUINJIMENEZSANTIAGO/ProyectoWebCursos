@@ -1,9 +1,4 @@
 div.findSelect {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
-    position: sticky;
-    top: 45px;
-    z-index: 6;
     text-align: center;
 }
 img {

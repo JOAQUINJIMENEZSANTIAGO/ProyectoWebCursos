@@ -16,7 +16,7 @@ export class ViewAppComponent implements OnInit {
 
   async ngOnInit() {
     this.app = await this.appselect.getAppsForTitle();
-    (this.app.length == 0) ? false : this.app[0].img.splice(0,1);
+    // (this.app.length == 0) ? false : this.app[0].img.splice(0,1);
     console.log(this.app);
     
   }
