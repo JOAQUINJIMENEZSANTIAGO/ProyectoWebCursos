@@ -76,7 +76,7 @@ export const DATA: any = {
         }
     ],
     router: [
-        "Portfolio", "Cursos", "Sobre Mi"
+        "Portfolio", "Tecnologias","Cursos", "Sobre Mi"
     ],
     author: {
         name: "Raul tejero",
