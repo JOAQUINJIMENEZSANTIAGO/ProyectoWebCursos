@@ -17,7 +17,7 @@ div nav {
     justify-content: center;
 }
 div nav a {
-    margin: 0 30px;
+    margin: 0 30px 10px;
     color: var(--text-color-footer);
     font-size: 14px;
 }

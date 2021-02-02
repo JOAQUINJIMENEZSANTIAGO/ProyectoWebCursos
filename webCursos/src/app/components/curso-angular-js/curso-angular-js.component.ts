@@ -37,8 +37,8 @@ export class CursoAngularJSComponent implements OnInit {
       this.title = this.cursos[1];
 
       this.stringRouter = await this.routingService.getAllRouting();
-      this.returnRouter = "/"+this.stringRouter[1];
-      this.returnText = "Volver a los "+this.stringRouter[1];
+      this.returnRouter = "/"+this.stringRouter[2];
+      this.returnText = "Volver a los "+this.stringRouter[2];
     } catch (error) {
       console.log(error);
     }
