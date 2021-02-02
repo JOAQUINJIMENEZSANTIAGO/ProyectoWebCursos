@@ -21,3 +21,11 @@ div.navb {
 div.container {
     margin-bottom: 80px;
 }
+a {
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px;
+    top: 10px;
+    color: rgb(194, 27, 27);
+    font-size: 12px;
+}

@@ -1,8 +1,7 @@
 <div *ngFor="let app of app">
     <div>
         <h1>{{app.title}}</h1>
-        <h3>{{app.technologies}}</h3>
-        <p>{{app.description}}</p>
+        <p *ngFor="let text of app.description">{{text}}</p>
     </div>
     <div>
         <div class="img">

@@ -1,5 +1,4 @@
 import { Component, OnInit }from '@angular/core';
-import { App } from 'src/app/interfaces/app';
 import { AppsService } from 'src/app/services/apps.service';
 
 
