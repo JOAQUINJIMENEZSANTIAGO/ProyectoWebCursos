@@ -20,8 +20,8 @@ const routes: Routes = [
   { path: DATA.router[2], component: CursosComponent },
   { path: DATA.router[3], component: MyPersonComponent },
   
-  { path: DATA.router[1] + "/" + DATA.cursos[0].title, component: CursoJSComponent },
-  { path: DATA.router[1] + "/" + DATA.cursos[1].title, component: CursoAngularJSComponent },
+  { path: DATA.router[2] + "/" + DATA.cursos[0].title, component: CursoJSComponent },
+  { path: DATA.router[2] + "/" + DATA.cursos[1].title, component: CursoAngularJSComponent },
   { path: "viewApp", component: ViewAppComponent},
   { path: "**", pathMatch: "full", redirectTo: DATA.router[0] }
 ];

@@ -1,0 +1,49 @@
+div.container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.container div {
+    width: 12%;
+    padding: 15px;
+    animation: scale .3s ease-in-out;
+}
+div.container div img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+div.container div h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(.3);
+    }
+}
+
+@media (max-width:1200px) {
+    div.container div {
+        width: 10%;
+    }
+}
+@media  (max-width:1024px) {
+    div.container div {
+        width: 14.28%;
+    }
+}
+
+@media  (max-width:768px) {
+    div.container div {
+        width: 20%;
+    }
+}
+
+@media (max-width:600px) {
+    div.container div {
+        width: 33.333%;
+        margin: auto;
+    }
+}

@@ -20,7 +20,7 @@ p.returnCursos {
     top: 47px;
     width: 100%;
     text-align: right;
-    animation: returnCursos 2s ease;
+    animation: returnCursos 1s ease;
     z-index: 10;
 }
 

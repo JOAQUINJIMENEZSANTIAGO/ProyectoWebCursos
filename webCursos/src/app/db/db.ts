@@ -4,21 +4,21 @@ export const DATA: any = {
             id: 1,
             title: "Javascript",
             description: "Iniciación y primeros fundamentos de JavaScript",
-            img: "../../../assets/images/js.png",
+            img: "../../../assets/technologies/js.png",
             finished: false
         },
         {
             id: 2,
             title: "AngularJS",
             description: "Aprende a crear componentes, intrefaces, servicios, apis...",
-            img: "../../../assets/images/angular.png",
+            img: "../../../assets/technologies/angular.png",
             finished: true
         },
         {
             id: 3,
             title: "Git",
             description: "Varios comandos que debes saber con Git",
-            img: "../../../assets/images/gitt.png",
+            img: "../../../assets/technologies/gitt.png",
             finished: false
         }
 
@@ -29,9 +29,16 @@ export const DATA: any = {
             type: "Proyecto personal",
             site: "https://appblog-68dfd.web.app/blog",
             title: "App Portfolio",
-            description: ["AppWeb creada como portfolio personal y plataforma educativa."," La maquetación y las transiciones es realizadas a traves de CSS sin librerias. Creación de componentes, servicios, interfaces. Un fichero .js contiene la base de datos."],
-            technologies: [ " Angular JS", " Git"],
-            img: ["../../../assets/images/Screenshot_2021-01-31 CursoJS.png","../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 18_01_26.png","../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 18_01_48.png","../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 18_02_15.png","../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 18_02_37.png"],
+            description: [
+                "AppWeb reactiva creada como portfolio personal y plataforma educativa.",
+                " La maquetación y las transiciones es realizadas a traves de CSS sin librerias."
+            ],
+            technologies: [
+                " Angular JS",
+                " Git"],
+            img: [
+                "../../../assets/images/Screenshot_2021-01-31 CursoJS.png",
+            ],
             view: false
         },
         {
@@ -39,9 +46,26 @@ export const DATA: any = {
             type: "Participación",
             site: "https://appblog-68dfd.web.app/blog",
             title: "CalculaTuCompra",
-            description: [" descripcion"],
-            technologies: ["Bootstrap", " Angular JS", " Express JS", " Node JS", " Api Google Maps", " Git"],
-            img: ["../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_27_40.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_28_01.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_28_37.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_30_40.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_31_24.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_31_47.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_32_56.png", "../../../assets/images/loging.guard.ts - proyectos - Visual Studio Code 01_02_2021 17_33_21.png","../../../assets/images/MySQL Workbench 01_02_2021 18_25_57.png"],
+            description: [
+                "App web que ayuda la gestión económica de las compras de productos de primera necesidad. Con posibilidad de guardar listas, requerirlas más tarde filtrando por fecha o nombre. Contiene gráfica de gastos y la ubicación de las tiendas más cercanas según la ubicación en la que se encuentra",
+                "Realizada con AngularJS,MySQL, Express, se utilizaron librerías como PrimeNg para la gráfica, Puppetter para realizar un web scrapper y recopilar más de 3000 productos, Angular Google Maps (AGM)",
+                "Problemas con la petición a Google Maps para la búsqueda de tiendas hecha desde el front por los cords, resuelta desde el back con la librería Axos"
+            ],
+            technologies: [
+                "Bootstrap",
+                " Angular JS",
+                " Express JS",
+                " Node JS",
+                " Api Google Maps",
+                " Git"
+            ],
+            img: [
+                "../../../assets/images/Screenshot_2021-01-31 FrontListaCompra.png",
+                "../../../assets/images/Screenshot_2021-02-02 FrontListaCompra(2).png",
+                "../../../assets/images/Screenshot_2021-02-02 FrontListaCompra(1).png",
+                "../../../assets/images/Screenshot_2021-02-02 FrontListaCompra(3).png",
+                "../../../assets/images/Screenshot_2021-02-02 FrontListaCompra(4).png"
+            ],
             view: false
         }
         ,
@@ -50,9 +74,19 @@ export const DATA: any = {
             type: "Proyecto personal",
             site: "https://appblog-68dfd.web.app/blog",
             title: "blog",
-            description: [" descripcion"] ,
-            technologies: ["Bootstrap", " Angular JS", " Git"],
-            img: ["../../../assets/images/blog.png", "../../../assets/images/blogService.png", "../../../assets/images/blogForm.png", "../../../assets/images/blogFormControl.png"],
+            description: [
+                "Página web dinámica, permite crear un post y visualizarlos todos o filtrarlos por categorías",
+                "Realizada con AngularJS, Bootstrap. "
+            ],
+            technologies: [
+                "Bootstrap",
+                " Angular JS",
+                " Git"],
+            img: [
+                "../../../assets/images/blog.png",
+                "../../../assets/images/Screenshot_2021-02-02 Blog.png",
+                "../../../assets/images/Screenshot_2021-02-02 Blog(1).png"
+            ],
             view: true
         },
         {
@@ -60,23 +94,93 @@ export const DATA: any = {
             type: "Proyecto personal",
             site: "https://todo-d615f.web.app/",
             title: "toDo",
-            description:["App para listas jbefji efjkfhwef jhwefh efljefi"] ,
-            technologies: ["Javascript vanilla"],
-            img: ["../../../assets/images/todo.jpg", "../../../assets/images/todocode1.png", "../../../assets/images/todocode2.png"],
+            description: [
+                "App web para creación de tareas, con posibilidad de filtrar por prioridad o por nombre, realizada con Javascript y CSS",
+                "Todo recae sobre un array , creando funciones separadas por desempeños que requieren métodos para manipular el array"
+            ],
+            technologies: [
+                "Javascript vanilla"
+            ],
+            img: [
+                "../../../assets/images/todo.jpg",
+                "../../../assets/images/Screenshot_2021-02-02 Listado de tareas.jpg"
+            ],
             view: true
         }, {
             id: 1,
             type: "Proyecto personal",
             site: "https://hamburgueseria-5d0f3.firebaseapp.com/",
             title: "One Page",
-            description:[" descripcion"] ,
-            technologies: ["Bootstrap", " HTML5", " CSS"],
-            img: ["../../../assets/images/hamburgueseria.jpg", "../../../assets/images/hamburguesaCSS.png", "../../../assets/images/hamburguesaHTML.png"],
+            description: [
+                "Página web responsiva realizada con HTML5 y CSS, uso de pseudo selectores y variables CSS"
+            ],
+            technologies: [
+                "Bootstrap",
+                " HTML5",
+                " CSS"
+            ],
+            img: [
+                "../../../assets/images/hamburgueseria.jpg",
+                "../../../assets/images/ScreenshotHamburguesera.png",
+                "../../../assets/images/ScreenshotHamburguesera(1).png"
+            ],
             view: true
         }
     ],
     router: [
-        "Portfolio", "Tecnologias","Cursos", "Sobre Mi"
+        "Portfolio",
+        "Tecnologias",
+        "Cursos",
+        "Sobre Mi"
+    ],
+    technologies: [
+
+        {
+            title: "MongoDB",
+            img: "../assets/technologies/mongodb.png"
+        },
+        {
+            title: "MySQL",
+            img: "../assets/technologies/mysql.png"
+        },
+        {
+            title: "Express",
+            img: "../assets/technologies/express.png"
+        },
+        {
+            title: "NodeJS",
+            img: "../assets/technologies/nodejs.png"
+        },
+        {
+            title: "TypeScript",
+            img: "../assets/technologies/typescript.png"
+        },
+        {
+            title: "AngularJS",
+            img: "../assets/technologies/angular.png"
+        },
+        {
+            title: "Javascript",
+            img: "../assets/technologies/js.png"
+        },
+
+        {
+            title: "CSS",
+            img: "../assets/technologies/css.png"
+        },
+        {
+            title: "Bootstrap",
+            img: "../assets/technologies/bootstrap.png"
+        },
+        {
+            title: "HTML5",
+            img: "../assets/technologies/html.png"
+        },
+        {
+            title: "Git",
+            img: "../assets/technologies/git.png"
+        }
+
     ],
     author: {
         name: "Raul tejero",
@@ -107,6 +211,9 @@ export const DATA: any = {
             }
 
         ],
-        photo: "../assets/images/photo.jpeg"
-    }
+        photo: "../assets/photo/photo.jpeg"
+    },
+
 }
+
+
