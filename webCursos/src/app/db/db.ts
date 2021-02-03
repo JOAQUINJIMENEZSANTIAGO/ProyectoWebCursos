@@ -53,7 +53,7 @@ export const DATA: any = {
             ],
             technologies: [
                 "Bootstrap",
-                " Angular JS",
+                " Angular",
                 " Express JS",
                 " Node JS",
                 " Api Google Maps",
@@ -156,7 +156,7 @@ export const DATA: any = {
             img: "../assets/technologies/typescript.png"
         },
         {
-            title: "AngularJS",
+            title: "Angular",
             img: "../assets/technologies/angular.png"
         },
         {

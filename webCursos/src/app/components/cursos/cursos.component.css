@@ -2,7 +2,7 @@ div.findSelect {
     text-align: center;
 }
 img {
-    width: 30% !important;
+    width: 80% !important;
 }
 
 div.findSelect input {
@@ -21,19 +21,23 @@ div.findSelect i {
 }
 
 div.button {
-    margin: auto;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 87%, rgba(255, 255, 255, 0) 100%);
+    margin: -50px auto;
     text-align: center;
     color: var(--text-color-second);
     font-weight: 900;
     font-size: 16px;
-    padding: 20px 0 40px;
+    padding: 20px 0 20px;
     transition: all .2s ease-in-out;
     animation: linkVolver .3s ease;
     position: sticky;
     top: 130px;
     z-index: 6;
 }
-
+div.button p {
+    width: max-content;
+    margin: auto;
+}
 div.button p:hover {
     color: black;
     cursor: pointer;
@@ -45,11 +49,13 @@ p.button:active {
 
 p.noFind {
     text-align: center;
+    margin-top: 100px;
 }
 
 div.line {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 div.line div.card {

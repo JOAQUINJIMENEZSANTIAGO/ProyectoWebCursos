@@ -78,7 +78,7 @@ div.bannerAlert p {
 div.findSelect {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 0) 100%);
-    padding: 40px 0 5px;
+    padding: 50px 0 5px;
     position: sticky;
     top: 42px;
     z-index: 6;
